@@ -57,10 +57,12 @@ header {
 
 .options {
     background: url('../../images/bg-triangle.svg') no-repeat;
+    width: 500px;
+    height: 500px;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-30%, 20%);
 }
 
 .rules-btn {
