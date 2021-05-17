@@ -1,52 +1,11 @@
-@import './config', './header', './game-start';
+@import './config', './header', './game-start', './rules';
 
 body {
     background: $background-color;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-.rules {
-    display: none;
-    background: $elements_bg-color;
-    position: absolute;
-    height: 400px;
-    width: 400px;
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    &__header {
-        display: flex;
-        padding: 20px;
-        position: relative;
-
-        h1 {
-            margin: 0;
-            padding: 0;
-            color: #3b4163;
-            text-transform: uppercase;
-            font-family: $main-font;
-        }
-
-        img {
-            width: 20px;
-            height: 20px;
-            align-self: center;
-            position: absolute;
-            right: 20px;
-            cursor: pointer;
-        }
-    }
-
-    &__image {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -70%);
-    }
+    position: relative;
 }
 
 footer {

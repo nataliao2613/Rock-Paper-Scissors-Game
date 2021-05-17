@@ -1,6 +1,7 @@
 let rulesButton = document.querySelector('.rules-btn')
 let rules = document.querySelector('.rules')
 let closeButton = document.querySelector('.close-button')
+let body = document.querySelector('body')
 let show = false;
 
 const onRule = () => {
@@ -16,6 +17,7 @@ const onClose = () => {
 const rulesDisplay = () => {
     if(show){
         rules.style.display = 'block'
+        
     }
     else {
         rules.style.display = 'none'
