@@ -1,11 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: radial-gradient(#1f3756, #141539);
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -64,6 +61,24 @@ header img {
 .score-box__text .points {
   font: 700 50px "Barlow Semi Condensed", sans-serif;
   color: #58566b;
+}
+
+.rules-btn {
+  background: transparent;
+  color: #f6f6f6;
+  border: 2px solid #606e85;
+  height: 42px;
+  width: 130px;
+  border-radius: 5px;
+  font: 600 15px "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  -webkit-transform: translate(5%, 10%);
+          transform: translate(5%, 10%);
 }
 
 footer {
