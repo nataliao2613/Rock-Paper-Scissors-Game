@@ -34,6 +34,33 @@ header img {
   right: 20px;
 }
 
+.score-box__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 10%;
+}
+
+.score-box__text span {
+  color: #2a46c0;
+  font: 700 15px "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.score-box__text .points {
+  font: 700 50px "Barlow Semi Condensed", sans-serif;
+  color: #58566b;
+}
+
 footer {
   font-size: 11px;
 }

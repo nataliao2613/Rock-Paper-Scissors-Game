@@ -30,6 +30,26 @@ header {
     border-radius: 10px;
     position: absolute;
     right: 20px;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 10%;
+
+        span {
+            color: hsl(229, 64%, 46%);
+            font: 700 15px $main-font;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .points {
+            font: 700 50px $main-font;
+            color: #58566b;
+        }
+    }
 }
 
 footer {
