@@ -215,6 +215,7 @@ body {
       align-self: center;
   position: absolute;
   right: 20px;
+  cursor: pointer;
 }
 
 .rules__image {
