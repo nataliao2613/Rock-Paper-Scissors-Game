@@ -6,9 +6,34 @@ body {
     min-height: 100vh;
 }
 
+header {
+    width: 50%;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 10%);
+
+    img {
+        height: 92px;
+    }
+}
+
+.score-box {
+    height: 100px;
+    width: 130px;
+    background: #f6f6f6;
+    border-radius: 10px;
+    position: absolute;
+    right: 20px;
+}
+
 footer {
     font-size: 11px;
-    text-align: center;
 
     a {
         color: hsl(228, 45%, 44%);
