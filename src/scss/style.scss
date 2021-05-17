@@ -1,85 +1,10 @@
-$background-color: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-$main-font: 'Barlow Semi Condensed', sans-serif;
-$border-color: hsl(217, 16%, 45%);
+@import './config', './header', './game-start';
 
 body {
     background: $background-color;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-header {
-    width: 50%;
-    border: 2px solid $border-color;
-    border-radius: 20px;
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    position: relative;
-    left: 50%;
-    top: 10%;
-    transform: translate(-50%, 10%);
-
-    img {
-        height: 92px;
-    }
-}
-
-.score-box {
-    height: 100px;
-    width: 130px;
-    background: #f6f6f6;
-    border-radius: 10px;
-    position: absolute;
-    right: 20px;
-
-    &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        top: 10%;
-
-        span {
-            color: hsl(229, 64%, 46%);
-            font: 700 15px $main-font;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .points {
-            font: 700 50px $main-font;
-            color: #58566b;
-        }
-    }
-}
-
-.options {
-    background: url('../../images/bg-triangle.svg') no-repeat;
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-30%, 20%);
-}
-
-.rules-btn {
-    background: transparent;
-    color: #f6f6f6;
-    border: 2px solid $border-color;
-    height: 42px;
-    width: 130px;
-    border-radius: 5px;
-    font: 600 15px $main-font;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-    transform: translate(5%, 10%);
 }
 
 footer {
@@ -90,5 +15,6 @@ footer {
     transform: translate(-50%);
     a {
         color: hsl(228, 45%, 44%);
+        font-family: $main-font;
     }
 }

@@ -1,0 +1,20 @@
+$background-color: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$main-font: 'Barlow Semi Condensed', sans-serif;
+$border-color: hsl(217, 16%, 45%);
+$elements_bg-color: #f8f8f8;
+
+@function option-icon($image) {
+    @return url($image) no-repeat;
+}
+
+@function option-border($from, $to) {
+    @return linear-gradient($from, $to);
+}
+
+@mixin border-shadow($color) {
+    box-shadow: 0 7px $color;
+}
+
+@mixin bg-shadow() {
+    box-shadow: 0 7px #b9bed4 inset;
+}
