@@ -55,6 +55,14 @@ header {
     }
 }
 
+.options {
+    background: url('../../images/bg-triangle.svg') no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+}
+
 .rules-btn {
     background: transparent;
     color: #f6f6f6;
