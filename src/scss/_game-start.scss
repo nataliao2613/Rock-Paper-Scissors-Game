@@ -10,6 +10,11 @@
     &__icon {
         display: flex;
         position: absolute;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(70%);
+        }
 
         &::before {
             content: '';
@@ -99,4 +104,8 @@
     bottom: 10%;
     right: 5%;
     transform: translate(5%, 10%);
+
+    &:hover {
+        filter: brightness(50%);
+    }
 }

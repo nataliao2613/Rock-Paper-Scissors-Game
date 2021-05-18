@@ -72,6 +72,12 @@ header img {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  cursor: pointer;
+}
+
+.options__icon:hover {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 .options__icon::before {
@@ -171,6 +177,11 @@ header img {
           transform: translate(5%, 10%);
 }
 
+.rules-btn:hover {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
 .rules {
   display: none;
   position: absolute;
@@ -207,6 +218,15 @@ header img {
   position: absolute;
   right: 20px;
   cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.rules__header img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .rules__image {
