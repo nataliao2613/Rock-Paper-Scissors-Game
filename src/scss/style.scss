@@ -1,11 +1,15 @@
-@import './config', './header', './game-start', './rules';
+@import './config', './header', './options', './rules', './game';
 
 body {
     background: $background-color;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     position: relative;
+}
+
+main {
+    height: 60%;
 }
 
 footer {

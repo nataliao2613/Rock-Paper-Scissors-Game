@@ -11,7 +11,6 @@ header {
           align-items: center;
   position: relative;
   left: 50%;
-  top: 10%;
   -webkit-transform: translate(-50%, 10%);
           transform: translate(-50%, 10%);
 }
@@ -96,6 +95,7 @@ header img {
 
 .options__icon--paper .image {
   background: url("../../images/icon-paper.svg") no-repeat;
+  background-position: 31% 33%;
 }
 
 .options__icon--paper::before {
@@ -112,6 +112,7 @@ header img {
 
 .options__icon--scissors .image {
   background: url("../../images/icon-scissors.svg") no-repeat;
+  background-position: 31% 33%;
 }
 
 .options__icon--scissors::before {
@@ -128,6 +129,7 @@ header img {
 
 .options__icon--rock .image {
   background: url("../../images/icon-rock.svg") no-repeat;
+  background-position: 31% 33%;
 }
 
 .options__icon--rock::before {
@@ -137,7 +139,7 @@ header img {
           box-shadow: 0 7px #9e1531;
 }
 
-.options .image {
+.image {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -146,7 +148,7 @@ header img {
   background-position: 31% 33%;
 }
 
-.options .image::after {
+.image::after {
   content: '';
   background: #f8f8f8;
   height: 120px;
@@ -264,12 +266,75 @@ header img {
   left: 0;
 }
 
+.game {
+  display: none;
+  position: relative;
+  top: 10%;
+  left: 30%;
+  width: 50%;
+  height: 100%;
+}
+
+.game p {
+  color: #f8f8f8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.game__user {
+  width: 50%;
+  position: relative;
+}
+
+.game__computer {
+  width: 50%;
+  position: relative;
+  left: 8%;
+}
+
+.game__computer .choice {
+  height: 50%;
+  width: 60%;
+  background: #17223e;
+  border-radius: 50%;
+  position: relative;
+  top: 12%;
+  left: -4%;
+}
+
+.user-choice {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+}
+
+.user-choice .options__icon {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.user-choice .options__icon:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  cursor: auto;
+}
+
+.user-choice .image {
+  background-position: 31% 33%;
+}
+
 body {
   background: radial-gradient(#1f3756, #141539);
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
   position: relative;
+}
+
+main {
+  height: 60%;
 }
 
 footer {

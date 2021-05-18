@@ -18,3 +18,7 @@ $elements_bg-color: #f8f8f8;
 @mixin bg-shadow() {
     box-shadow: 0 7px #b9bed4 inset;
 }
+
+@mixin hand-placement() {
+    background-position: 31% 33%;
+}

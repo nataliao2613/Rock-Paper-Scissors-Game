@@ -1,0 +1,58 @@
+.game {
+    display: none;
+    position: relative;
+    top: 10%;
+    left: 30%;
+    // transform: translate(-30%, 20%);
+    // transform: translate(0, 10%);
+    width: 50%;
+    height: 100%;
+
+    p {
+        color: $elements_bg-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $main-font;
+        font-size: 20px;
+    }
+
+    &__user {
+        width: 50%;
+        position: relative;
+    }
+
+    &__computer {
+        width: 50%;
+        position: relative;
+        left: 8%;
+
+        .choice {
+            height: 50%;
+            width: 60%;
+            background: #17223e;
+            border-radius: 50%;
+            position: relative;
+            top: 12%;
+            left: -4%;
+        }
+    }
+}
+
+.user-choice {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    // transform: translate(40%, 70%);
+
+    .options__icon {
+        transform: scale(1.4);
+        &:hover {
+            filter: brightness(100%);
+            cursor: auto;
+        }
+    }
+
+    .image {
+        @include hand-placement;
+    }
+}

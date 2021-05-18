@@ -6,6 +6,7 @@
     top: 20%;
     left: 50%;
     transform: translate(-30%, 20%);
+    // display: none;
 
     &__icon {
         display: flex;
@@ -30,6 +31,7 @@
             right: 80%;
             .image {
                 background: option-icon('../../images/icon-paper.svg');
+                @include hand-placement;
             }
 
             &::before {
@@ -45,6 +47,7 @@
             right: 27%;
             .image {
                 background: option-icon('../../images/icon-scissors.svg');
+                @include hand-placement;
             }
             &::before {
                 background: option-border(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
@@ -56,6 +59,7 @@
             right: 54%;
             .image {
                 background: option-icon('../../images/icon-rock.svg');
+                @include hand-placement;
             }
             &::before {
                 background: option-border(
@@ -66,26 +70,26 @@
             }
         }
     }
+}
 
-    .image {
-        height: 100%;
-        width: 100%;
+.image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    background-position: 31% 33%;
+
+    &::after {
+        content: '';
+        background: $elements_bg-color;
+        height: 120px;
+        width: 120px;
+        display: block;
+        z-index: -1;
         position: absolute;
-        top: 12%;
-        left: 12%;
-        background-position: 31% 33%;
-
-        &::after {
-            content: '';
-            background: $elements_bg-color;
-            height: 120px;
-            width: 120px;
-            display: block;
-            z-index: -1;
-            position: absolute;
-            border-radius: 50%;
-            @include bg-shadow();
-        }
+        border-radius: 50%;
+        @include bg-shadow();
     }
 }
 
