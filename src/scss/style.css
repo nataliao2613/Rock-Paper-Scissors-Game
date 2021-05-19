@@ -295,16 +295,6 @@ header img {
   left: 8%;
 }
 
-.game__computer .choice {
-  height: 50%;
-  width: 60%;
-  background: #17223e;
-  border-radius: 50%;
-  position: relative;
-  top: 12%;
-  left: -4%;
-}
-
 .user-choice {
   position: absolute;
   top: 70%;
@@ -323,6 +313,51 @@ header img {
 }
 
 .user-choice .image {
+  background-position: 31% 33%;
+}
+
+.choice-placement {
+  height: 50%;
+  width: 60%;
+  background: #17223e;
+  border-radius: 50%;
+  position: relative;
+  top: 12%;
+  left: -4%;
+}
+
+.choice-placement .computer-choice {
+  position: relative;
+  display: none;
+}
+
+.choice-placement .computer-choice--rock {
+  top: 87%;
+  left: 45%;
+}
+
+.choice-placement .computer-choice--paper {
+  top: 87%;
+  left: 70%;
+}
+
+.choice-placement .computer-choice--scissors {
+  top: 87%;
+  left: 20%;
+}
+
+.choice-placement .options__icon {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.choice-placement .options__icon:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  cursor: auto;
+}
+
+.choice-placement .image {
   background-position: 31% 33%;
 }
 

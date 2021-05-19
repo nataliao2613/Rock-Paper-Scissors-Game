@@ -3,8 +3,6 @@
     position: relative;
     top: 10%;
     left: 30%;
-    // transform: translate(-30%, 20%);
-    // transform: translate(0, 10%);
     width: 50%;
     height: 100%;
 
@@ -25,16 +23,6 @@
         width: 50%;
         position: relative;
         left: 8%;
-
-        .choice {
-            height: 50%;
-            width: 60%;
-            background: #17223e;
-            border-radius: 50%;
-            position: relative;
-            top: 12%;
-            left: -4%;
-        }
     }
 }
 
@@ -42,10 +30,51 @@
     position: absolute;
     top: 70%;
     left: 40%;
-    // transform: translate(40%, 70%);
 
     .options__icon {
         transform: scale(1.4);
+        &:hover {
+            filter: brightness(100%);
+            cursor: auto;
+        }
+    }
+
+    .image {
+        @include hand-placement;
+    }
+}
+
+.choice-placement {
+    height: 50%;
+    width: 60%;
+    background: #17223e;
+    border-radius: 50%;
+    position: relative;
+    top: 12%;
+    left: -4%;
+
+    .computer-choice {
+        position: relative;
+        display: none;
+
+        &--rock {
+            top: 87%;
+            left: 45%;
+        }
+        &--paper {
+            top: 87%;
+            left: 70%;
+        }
+        &--scissors {
+            top: 87%;
+            left: 20%;
+        }
+    }
+
+    .options__icon {
+        transform: scale(1.4);
+        // bottom: 11%;
+        // left: 14%;
         &:hover {
             filter: brightness(100%);
             cursor: auto;
