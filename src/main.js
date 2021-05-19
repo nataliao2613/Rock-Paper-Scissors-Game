@@ -6,6 +6,7 @@ let optionsList = document.querySelectorAll('.options__icon')
 let options = [...optionsList]
 let optionsSection = document.querySelector('.options')
 let gameSection = document.querySelector('.game')
+let logo = document.querySelector('header img')
 
 const onRule = () => {
     show = true
@@ -16,7 +17,7 @@ const onClose = () => {
     show = false
     rulesDisplay()
 }
-
+// options__icon--rock
 const choseOption = () => {
     optionsSection.style.display = 'none'
     gameSection.style.display = 'flex'
@@ -25,6 +26,12 @@ const choseOption = () => {
 const rulesDisplay = () => show ? rules.style.display = 'block' : rules.style.display = 'none'
 options.forEach((op, id) => op.addEventListener('click', choseOption))
 
+const onLogoClick = () => {
+    optionsSection.style.display = 'block'
+    gameSection.style.display = 'none'
+}
+
 
 rulesButton.addEventListener('click', onRule)
 closeButton.addEventListener('click', onClose)
+logo.addEventListener('click', onLogoClick)
