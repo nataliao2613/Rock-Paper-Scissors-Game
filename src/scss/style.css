@@ -339,8 +339,8 @@ header img {
 .choice-placement .computer-choice {
   position: relative;
   display: none;
-  -webkit-animation: appears 2s 1;
-          animation: appears 2s 1;
+  -webkit-animation: appears 1s 1;
+          animation: appears 1s 1;
 }
 
 .choice-placement .computer-choice--rock {
@@ -373,6 +373,50 @@ header img {
   background-position: 31% 33%;
 }
 
+.result {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 14%;
+  -webkit-animation: appears 3s 1;
+          animation: appears 3s 1;
+}
+
+.result__header {
+  color: #f8f8f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.result button {
+  background: #f8f8f8;
+  color: #3b4163;
+  text-transform: uppercase;
+  font: 600 15px "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 2px;
+  height: 42px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+.result button:hover {
+  color: #be3954;
+  cursor: pointer;
+}
+
 @-webkit-keyframes appears {
   from {
     opacity: 0;
@@ -396,7 +440,7 @@ header img {
     right: 0;
   }
   to {
-    right: 18%;
+    right: 15%;
   }
 }
 
@@ -405,7 +449,7 @@ header img {
     right: 0;
   }
   to {
-    right: 18%;
+    right: 15%;
   }
 }
 

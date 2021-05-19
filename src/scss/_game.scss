@@ -64,7 +64,7 @@
     .computer-choice {
         position: relative;
         display: none;
-        animation: appears 2s 1;
+        animation: appears 1s 1;
 
         &--rock {
             top: 87%;
@@ -93,6 +93,42 @@
     }
 }
 
+.result {
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    animation: appears 3s 1;
+
+    &__header {
+        color: $elements_bg-color;
+        font-family: $main-font;
+        text-transform: uppercase;
+        font-size: 50px;
+    }
+
+    button {
+        background: $elements_bg-color;
+        color: #3b4163;
+        text-transform: uppercase;
+        font: 600 15px $main-font;
+        letter-spacing: 2px;
+        height: 42px;
+        width: 200px;
+        border-radius: 5px;
+        border: none;
+
+        &:hover {
+            color: #be3954;
+            cursor: pointer;
+        }
+    }
+}
+
 @keyframes appears {
     from {
         opacity: 0;
@@ -109,7 +145,7 @@
     }
 
     to {
-        right: 18%;
+        right: 15%;
     }
 }
 

@@ -8,13 +8,16 @@ let logo = document.querySelector('header img')
 let userChoice = document.querySelector('.user-choice div')
 let computerChoice = document.querySelector('.computer-choice div')
 let scoreBox = document.querySelector('.score-box__text .points')
+let resultBox = document.querySelector('.result')
+let resultHeader = document.querySelector('.result__header')
 
 let show = false
 let options = [...optionsList]
 let moves = ['paper', 'scissors', 'rock']
 let userMove = ''
 let computerMove = ''
-let score = 0;
+let score = 0
+let winner = ''
 
 const onRule = () => {
     show = true
@@ -41,36 +44,57 @@ const computerChooses = () => {
     computerMove = moves[id]
     computerChoice.classList.add(`options__icon--${computerMove}`)
     document.querySelector('.computer-choice').classList.add(`computer-choice--${computerMove}`)
-    
-    setTimeout(showComputerChoice, 2000)
-    
+    setTimeout(moveChoices, 2000)
 }
 
 const showComputerChoice = () => {
     document.querySelector('.computer-choice').style.display = 'block'
-    game()
+    
 }
 
 const game = () => {
     switch(userMove){
         case 'paper':
-            computerMove === 'scissors' ? score-- : (computerMove === 'rock' ? score++ : score = score)
+            if(computerMove === 'scissors'){
+                score--
+                winner = 'You lose'
+            } else if(computerMove === 'rock'){
+                score++
+                winner = 'You win'
+            } else winner = 'Draw'
             break
         case 'rock':
-            computerMove === 'paper' ? score-- : (computerMove === 'scissors' ? score++ : score = score)
+            if(computerMove === 'paper'){
+                score--
+                winner = 'You lose'
+            } else if(computerMove === 'scissors'){
+                score++
+                winner = 'You win'
+            } else winner = 'Draw'
             break
         case 'scissors':
-            computerMove === 'rock' ? score-- : (computerMove === 'rock' ? score++ : score = score)
+            if(computerMove === 'rock'){
+                score--
+                winner = 'You lose'
+            } else if(computerMove === 'paper'){
+                score++
+                winner = 'You win'
+            } else winner = 'Draw'
             break
     }
     scoreBox.textContent = score
-    setTimeout(moveChoices, 2000)
-    
+    resultHeader.textContent = winner
+    // setTimeout(showComputerChoice, 2000)
+    showComputerChoice()
 }
 
 const moveChoices = () => {
     document.querySelector('.game__user').classList.add('move-left')
     document.querySelector('.game__computer').classList.add('move-right')
+    game()
+    // setTimeout(() => resultBox.style.display = 'flex', 1000)
+    resultBox.style.display = 'flex'
+    
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {
