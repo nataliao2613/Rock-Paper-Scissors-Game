@@ -7,12 +7,14 @@ let gameSection = document.querySelector('.game')
 let logo = document.querySelector('header img')
 let userChoice = document.querySelector('.user-choice div')
 let computerChoice = document.querySelector('.computer-choice div')
+let scoreBox = document.querySelector('.score-box__text .points')
 
 let show = false
 let options = [...optionsList]
 let moves = ['paper', 'scissors', 'rock']
 let userMove = ''
 let computerMove = ''
+let score = 0;
 
 const onRule = () => {
     show = true
@@ -30,6 +32,8 @@ const onLogoClick = () => {
     optionsSection.style.display = 'block'
     gameSection.style.display = 'none'
     userChoice.classList.remove(`options__icon--${userMove}`)
+    computerChoice.classList.remove(`options__icon--${computerMove}`)
+    document.querySelector('.computer-choice').classList.remove(`computer-choice--${computerMove}`)
 }
 
 const computerChooses = () => {
@@ -37,11 +41,27 @@ const computerChooses = () => {
     computerMove = moves[id]
     computerChoice.classList.add(`options__icon--${computerMove}`)
     document.querySelector('.computer-choice').classList.add(`computer-choice--${computerMove}`)
+    game()
     setTimeout(showComputerChoice, 2000)
 }
 
 const showComputerChoice = () => {
     document.querySelector('.computer-choice').style.display = 'block'
+}
+
+const game = () => {
+    switch(userMove){
+        case 'paper':
+            computerMove === 'scissors' ? score-- : (computerMove === 'rock' ? score++ : score = score)
+            break
+        case 'rock':
+            computerMove === 'paper' ? score-- : (computerMove === 'scissors' ? score++ : score = score)
+            break
+        case 'scissors':
+            computerMove === 'rock' ? score-- : (computerMove === 'rock' ? score++ : score = score)
+            break
+    }
+    scoreBox.textContent = score
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {
