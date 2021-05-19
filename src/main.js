@@ -42,7 +42,15 @@ const computerChooses = () => {
     setTimeout(moveChoices, 2000)
 }
 
-const showComputerChoice = () => computerChoiceBox.style.display = 'block'
+const showComputerChoice = () => {
+    computerChoiceBox.style.display = 'block'
+    if(winner === 'You win'){
+        userChoice.classList.add('winner-shadow')
+    }
+    else {
+        computerChoice.classList.add('winner-shadow')
+    }
+}
 
 const game = () => {
     switch(userMove){
@@ -96,6 +104,8 @@ const newGame = () => {
     computerPart.classList.remove('move-right')
     resultBox.style.display = 'none'
     computerChoiceBox.style.display = 'none'
+    userChoice.classList.remove('winner-shadow')
+    userChoice.classList.remove('winner-shadow')
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {

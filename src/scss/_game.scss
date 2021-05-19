@@ -34,6 +34,12 @@
     animation: move-right 2s forwards;
 }
 
+.winner-shadow {
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px hsl(0, 0%, 80%), 0 0 0 15px hsl(0, 0%, 90%),
+        0 0 0 20px hsla(0, 0%, 90%, 0.514);
+}
+
 .user-choice {
     position: absolute;
     top: 70%;
@@ -41,6 +47,7 @@
 
     .options__icon {
         transform: scale(1.4);
+
         &:hover {
             filter: brightness(100%);
             cursor: auto;
