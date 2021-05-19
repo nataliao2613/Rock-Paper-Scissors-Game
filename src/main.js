@@ -47,7 +47,10 @@ const showComputerChoice = () => {
     if(winner === 'You win'){
         userChoice.classList.add('winner-shadow')
     }
-    else {
+    else if(winner === 'You lose'){
+        computerChoice.classList.add('winner-shadow')
+    } else {
+        userChoice.classList.add('winner-shadow')
         computerChoice.classList.add('winner-shadow')
     }
 }
@@ -105,7 +108,7 @@ const newGame = () => {
     resultBox.style.display = 'none'
     computerChoiceBox.style.display = 'none'
     userChoice.classList.remove('winner-shadow')
-    userChoice.classList.remove('winner-shadow')
+    computerChoice.classList.remove('winner-shadow')
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {
