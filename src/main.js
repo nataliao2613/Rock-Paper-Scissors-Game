@@ -31,8 +31,8 @@ options.forEach((op, id) => op.addEventListener('click', () => {
     optionsSection.style.display = 'none'
     gameSection.style.display = 'flex'
     let userChoice = document.querySelector('.user-choice div')
-    
-    console.log(userChoice.classList.add(`options__icon--${moves[id]}`))
+    userChoice.classList.add(`options__icon--${moves[id]}`)
+
 }))
 
 rulesButton.addEventListener('click', onRule)
