@@ -19,8 +19,13 @@ let options = [...optionsList]
 let moves = ['paper', 'scissors', 'rock']
 let userMove = ''
 let computerMove = ''
-let score = 0
+let score = ''
 let winner = ''
+
+if(window.localStorage.getItem('score') === null) score = 0
+    else score = window.localStorage.getItem('score')
+
+scoreBox.textContent = score
 
 const onRule = () => {
     show = true
@@ -88,7 +93,8 @@ const game = () => {
             } else winner = 'Draw'
             break
     }
-    scoreBox.textContent = score
+    window.localStorage.setItem('score', score)
+    scoreBox.textContent = window.localStorage.getItem('score')
     resultHeader.textContent = winner
     showComputerChoice()
 }
