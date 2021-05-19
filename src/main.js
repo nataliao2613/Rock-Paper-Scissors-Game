@@ -44,7 +44,8 @@ const computerChooses = () => {
 
 const showComputerChoice = () => {
     computerChoiceBox.style.display = 'block'
-    if(winner === 'You win'){
+    setTimeout(() => {
+            if(winner === 'You win'){
         userChoice.classList.add('winner-shadow')
     }
     else if(winner === 'You lose'){
@@ -53,6 +54,8 @@ const showComputerChoice = () => {
         userChoice.classList.add('winner-shadow')
         computerChoice.classList.add('winner-shadow')
     }
+    }, 1000)
+
 }
 
 const game = () => {
