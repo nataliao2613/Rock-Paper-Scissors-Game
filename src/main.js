@@ -4,12 +4,15 @@ let closeButton = document.querySelector('.close-button')
 let optionsList = document.querySelectorAll('.options__icon')
 let optionsSection = document.querySelector('.options')
 let gameSection = document.querySelector('.game')
-let logo = document.querySelector('header img')
+let userPart = document.querySelector('.game__user')
+let computerPart = document.querySelector('.game__computer')
 let userChoice = document.querySelector('.user-choice div')
+let computerChoiceBox = document.querySelector('.computer-choice')
 let computerChoice = document.querySelector('.computer-choice div')
 let scoreBox = document.querySelector('.score-box__text .points')
 let resultBox = document.querySelector('.result')
 let resultHeader = document.querySelector('.result__header')
+let playAgainButton = document.querySelector('.result button')
 
 let show = false
 let options = [...optionsList]
@@ -31,26 +34,15 @@ const onClose = () => {
 
 const rulesDisplay = () => show ? rules.style.display = 'block' : rules.style.display = 'none'
 
-const onLogoClick = () => {
-    optionsSection.style.display = 'block'
-    gameSection.style.display = 'none'
-    userChoice.classList.remove(`options__icon--${userMove}`)
-    computerChoice.classList.remove(`options__icon--${computerMove}`)
-    document.querySelector('.computer-choice').classList.remove(`computer-choice--${computerMove}`)
-}
-
 const computerChooses = () => {
     let id = Math.floor(Math.random() * moves.length)
     computerMove = moves[id]
     computerChoice.classList.add(`options__icon--${computerMove}`)
-    document.querySelector('.computer-choice').classList.add(`computer-choice--${computerMove}`)
+    computerChoiceBox.classList.add(`computer-choice--${computerMove}`)
     setTimeout(moveChoices, 2000)
 }
 
-const showComputerChoice = () => {
-    document.querySelector('.computer-choice').style.display = 'block'
-    
-}
+const showComputerChoice = () => computerChoiceBox.style.display = 'block'
 
 const game = () => {
     switch(userMove){
@@ -88,11 +80,22 @@ const game = () => {
 }
 
 const moveChoices = () => {
-    document.querySelector('.game__user').classList.add('move-left')
-    document.querySelector('.game__computer').classList.add('move-right')
+    userPart.classList.add('move-left')
+    computerPart.classList.add('move-right')
     game()
     resultBox.style.display = 'flex'
-    
+}
+
+const newGame = () => {
+    optionsSection.style.display = 'block'
+    gameSection.style.display = 'none'
+    userChoice.classList.remove(`options__icon--${userMove}`)
+    computerChoice.classList.remove(`options__icon--${computerMove}`)
+    computerChoiceBox.classList.remove(`computer-choice--${computerMove}`)
+    userPart.classList.remove('move-left')
+    computerPart.classList.remove('move-right')
+    resultBox.style.display = 'none'
+    computerChoiceBox.style.display = 'none'
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {
@@ -105,4 +108,4 @@ options.forEach((op, id) => op.addEventListener('click', () => {
 
 rulesButton.addEventListener('click', onRule)
 closeButton.addEventListener('click', onClose)
-logo.addEventListener('click', onLogoClick)
+playAgainButton.addEventListener('click', newGame)
