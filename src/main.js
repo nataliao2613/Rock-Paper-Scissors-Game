@@ -84,7 +84,6 @@ const game = () => {
     }
     scoreBox.textContent = score
     resultHeader.textContent = winner
-    // setTimeout(showComputerChoice, 2000)
     showComputerChoice()
 }
 
@@ -92,7 +91,6 @@ const moveChoices = () => {
     document.querySelector('.game__user').classList.add('move-left')
     document.querySelector('.game__computer').classList.add('move-right')
     game()
-    // setTimeout(() => resultBox.style.display = 'flex', 1000)
     resultBox.style.display = 'flex'
     
 }
