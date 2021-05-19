@@ -329,6 +329,8 @@ header img {
 .choice-placement .computer-choice {
   position: relative;
   display: none;
+  -webkit-animation: appears 2s 1;
+          animation: appears 2s 1;
 }
 
 .choice-placement .computer-choice--rock {
@@ -359,6 +361,24 @@ header img {
 
 .choice-placement .image {
   background-position: 31% 33%;
+}
+
+@-webkit-keyframes appears {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appears {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 body {

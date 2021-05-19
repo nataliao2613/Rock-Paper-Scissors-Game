@@ -37,7 +37,7 @@ const computerChooses = () => {
     computerMove = moves[id]
     computerChoice.classList.add(`options__icon--${computerMove}`)
     document.querySelector('.computer-choice').classList.add(`computer-choice--${computerMove}`)
-    setTimeout(showComputerChoice, 3000)
+    setTimeout(showComputerChoice, 2000)
 }
 
 const showComputerChoice = () => {
