@@ -295,6 +295,16 @@ header img {
   left: 8%;
 }
 
+.move-left {
+  -webkit-animation: move-left 2s forwards;
+          animation: move-left 2s forwards;
+}
+
+.move-right {
+  -webkit-animation: move-right 2s forwards;
+          animation: move-right 2s forwards;
+}
+
 .user-choice {
   position: absolute;
   top: 70%;
@@ -378,6 +388,42 @@ header img {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes move-left {
+  from {
+    right: 0;
+  }
+  to {
+    right: 18%;
+  }
+}
+
+@keyframes move-left {
+  from {
+    right: 0;
+  }
+  to {
+    right: 18%;
+  }
+}
+
+@-webkit-keyframes move-right {
+  from {
+    left: 8%;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: 8%;
+  }
+  to {
+    left: 20%;
   }
 }
 

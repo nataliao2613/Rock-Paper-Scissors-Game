@@ -41,12 +41,14 @@ const computerChooses = () => {
     computerMove = moves[id]
     computerChoice.classList.add(`options__icon--${computerMove}`)
     document.querySelector('.computer-choice').classList.add(`computer-choice--${computerMove}`)
-    game()
+    
     setTimeout(showComputerChoice, 2000)
+    
 }
 
 const showComputerChoice = () => {
     document.querySelector('.computer-choice').style.display = 'block'
+    game()
 }
 
 const game = () => {
@@ -62,6 +64,13 @@ const game = () => {
             break
     }
     scoreBox.textContent = score
+    setTimeout(moveChoices, 2000)
+    
+}
+
+const moveChoices = () => {
+    document.querySelector('.game__user').classList.add('move-left')
+    document.querySelector('.game__computer').classList.add('move-right')
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {
