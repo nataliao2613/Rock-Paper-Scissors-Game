@@ -107,24 +107,40 @@ const moveChoices = () => {
 }
 
 const newGame = () => {
-    optionsSection.style.display = 'block'
-    gameSection.style.display = 'none'
-    userChoice.classList.remove(`options__icon--${userMove}`)
-    computerChoice.classList.remove(`options__icon--${computerMove}`)
-    computerChoiceBox.classList.remove(`computer-choice--${computerMove}`)
-    userPart.classList.remove('move-left')
-    computerPart.classList.remove('move-right')
-    resultBox.style.display = 'none'
-    computerChoiceBox.style.display = 'none'
-    userChoice.classList.remove('winner-shadow')
-    computerChoice.classList.remove('winner-shadow')
+    gameSection.style.animation = 'disappear 1s 1'
+    setTimeout(() => gameSection.style.display = 'none', 500)
+    optionsSection.classList.add('appears')
+    setTimeout(() => optionsSection.style.display = 'block', 500) 
+    setTimeout(() => {
+        userChoice.classList.remove(`options__icon--${userMove}`)
+        computerChoice.classList.remove(`options__icon--${computerMove}`)
+        computerChoiceBox.classList.remove(`computer-choice--${computerMove}`)
+        userPart.classList.remove('move-left')
+        computerPart.classList.remove('move-right')
+        resultBox.style.display = 'none'
+        computerChoiceBox.style.display = 'none'
+        userChoice.classList.remove('winner-shadow')
+        computerChoice.classList.remove('winner-shadow')
+        optionsSection.classList.remove('disappear')
+        gameSection.classList.remove('appears')
+    }, 1000)
+
 }
 
 options.forEach((op, id) => op.addEventListener('click', () => {
-    optionsSection.style.display = 'none'
-    gameSection.style.display = 'flex'
+    optionsSection.classList.remove('appears')
+    gameSection.style.animation = ''
+    optionsSection.classList.add('disappear')
+    setTimeout(() => {
+      optionsSection.style.display = 'none'
+      gameSection.classList.add('appears')
+    }, 500)
+    setTimeout(() => {
+        gameSection.style.display = 'flex'     
+    }, 500)  
     userMove = moves[id]
     userChoice.classList.add(`options__icon--${userMove}`)
+
     computerChooses()
 }))
 

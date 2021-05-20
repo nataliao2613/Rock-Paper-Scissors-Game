@@ -80,7 +80,7 @@
         width: 100%;
         position: relative;
         display: none;
-        animation: appears 1s 1;
+        animation: appears 1.5s 1;
     }
 
     .options__icon {
@@ -97,6 +97,10 @@
     .image {
         background-position: 32% 32%;
     }
+}
+
+.appears {
+    animation: appears 1s 1;
 }
 
 .result {

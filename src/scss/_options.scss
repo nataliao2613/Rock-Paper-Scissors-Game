@@ -74,6 +74,10 @@
     }
 }
 
+.disappear {
+    animation: disappear 1.5s 1;
+}
+
 .image {
     height: 100%;
     width: 100%;
@@ -112,5 +116,15 @@
 
     &:hover {
         filter: brightness(50%);
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
