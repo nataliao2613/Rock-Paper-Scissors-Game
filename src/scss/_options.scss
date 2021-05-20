@@ -1,17 +1,19 @@
 .options {
     background: url('../../images/bg-triangle.svg') no-repeat;
-    width: 500px;
-    height: 400px;
+    background-size: 65% 80%;
+    width: 70%;
+    height: 100%;
     position: absolute;
     top: 20%;
     left: 50%;
-    transform: translate(-30%, 20%);
-    // display: none;
+    transform: translate(-28%);
 
     &__icon {
         display: flex;
         position: absolute;
         cursor: pointer;
+        height: 38%;
+        width: 33%;
 
         &:hover {
             filter: brightness(70%);
@@ -19,16 +21,16 @@
 
         &::before {
             content: '';
-            height: 160px;
-            width: 160px;
+            height: 100%;
+            width: 100%;
             display: block;
             z-index: -1;
             border-radius: 50%;
         }
 
         &--paper {
-            bottom: 70%;
-            right: 80%;
+            bottom: 75%;
+            right: 85%;
             .image {
                 background: option-icon('../../images/icon-paper.svg');
                 @include hand-placement;
@@ -43,8 +45,8 @@
             }
         }
         &--scissors {
-            bottom: 70%;
-            right: 27%;
+            bottom: 75%;
+            right: 19%;
             .image {
                 background: option-icon('../../images/icon-scissors.svg');
                 @include hand-placement;
@@ -55,8 +57,8 @@
             }
         }
         &--rock {
-            bottom: 20%;
-            right: 54%;
+            bottom: 13%;
+            right: 52%;
             .image {
                 background: option-icon('../../images/icon-rock.svg');
                 @include hand-placement;
@@ -78,13 +80,13 @@
     position: absolute;
     top: 12%;
     left: 12%;
-    background-position: 31% 33%;
+    @include hand-placement;
 
     &::after {
         content: '';
         background: $elements_bg-color;
-        height: 120px;
-        width: 120px;
+        height: 75%;
+        width: 75%;
         display: block;
         z-index: -1;
         position: absolute;
@@ -96,18 +98,17 @@
 .rules-btn {
     background: transparent;
     color: $elements_bg-color;
-    border: 2px solid $border-color;
-    height: 42px;
-    width: 130px;
-    border-radius: 5px;
-    font: 600 15px $main-font;
+    border: 0.15em solid $border-color;
+    height: 12%;
+    width: 20%;
+    border-radius: 0.3em;
+    font: 600 1rem $main-font;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.15em;
     cursor: pointer;
     position: absolute;
-    bottom: 10%;
-    right: 5%;
-    transform: translate(5%, 10%);
+    top: 105%;
+    left: 120%;
 
     &:hover {
         filter: brightness(50%);

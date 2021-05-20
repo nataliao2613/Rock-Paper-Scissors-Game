@@ -12,13 +12,13 @@ $elements_bg-color: #f8f8f8;
 }
 
 @mixin border-shadow($color) {
-    box-shadow: 0 7px $color;
+    box-shadow: 0 0.5em $color;
 }
 
 @mixin bg-shadow() {
-    box-shadow: 0 7px #b9bed4 inset;
+    box-shadow: 0 0.5em #b9bed4 inset;
 }
 
 @mixin hand-placement() {
-    background-position: 31% 33%;
+    background-position: 30% 30%;
 }

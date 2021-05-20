@@ -5,7 +5,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  padding: 1.5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -16,16 +16,22 @@ header {
 }
 
 header img {
-  height: 92px;
+  height: 100%;
 }
 
 .score-box {
-  height: 100px;
-  width: 130px;
+  height: 70%;
+  width: 18%;
   background: #f8f8f8;
   border-radius: 10px;
   position: absolute;
-  right: 20px;
+  right: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .score-box__text {
@@ -45,25 +51,27 @@ header img {
 
 .score-box__text span {
   color: #2a46c0;
-  font: 700 15px "Barlow Semi Condensed", sans-serif;
+  font: 700 1rem "Barlow Semi Condensed", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .score-box__text .points {
-  font: 700 50px "Barlow Semi Condensed", sans-serif;
+  font: 700 3.5rem "Barlow Semi Condensed", sans-serif;
   color: #58566b;
+  top: 0;
 }
 
 .options {
   background: url("../../images/bg-triangle.svg") no-repeat;
-  width: 500px;
-  height: 400px;
+  background-size: 65% 80%;
+  width: 70%;
+  height: 100%;
   position: absolute;
   top: 20%;
   left: 50%;
-  -webkit-transform: translate(-30%, 20%);
-          transform: translate(-30%, 20%);
+  -webkit-transform: translate(-28%);
+          transform: translate(-28%);
 }
 
 .options__icon {
@@ -72,6 +80,8 @@ header img {
   display: flex;
   position: absolute;
   cursor: pointer;
+  height: 38%;
+  width: 33%;
 }
 
 .options__icon:hover {
@@ -81,62 +91,62 @@ header img {
 
 .options__icon::before {
   content: '';
-  height: 160px;
-  width: 160px;
+  height: 100%;
+  width: 100%;
   display: block;
   z-index: -1;
   border-radius: 50%;
 }
 
 .options__icon--paper {
-  bottom: 70%;
-  right: 80%;
+  bottom: 75%;
+  right: 85%;
 }
 
 .options__icon--paper .image {
   background: url("../../images/icon-paper.svg") no-repeat;
-  background-position: 31% 33%;
+  background-position: 30% 30%;
 }
 
 .options__icon--paper::before {
   background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
   background: linear-gradient(#4865f4, #5671f5);
-  -webkit-box-shadow: 0 7px #2945c3;
-          box-shadow: 0 7px #2945c3;
+  -webkit-box-shadow: 0 0.5em #2945c3;
+          box-shadow: 0 0.5em #2945c3;
 }
 
 .options__icon--scissors {
-  bottom: 70%;
-  right: 27%;
+  bottom: 75%;
+  right: 19%;
 }
 
 .options__icon--scissors .image {
   background: url("../../images/icon-scissors.svg") no-repeat;
-  background-position: 31% 33%;
+  background-position: 30% 30%;
 }
 
 .options__icon--scissors::before {
   background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
   background: linear-gradient(#ec9e0e, #eca922);
-  -webkit-box-shadow: 0 7px #c66d1b;
-          box-shadow: 0 7px #c66d1b;
+  -webkit-box-shadow: 0 0.5em #c66d1b;
+          box-shadow: 0 0.5em #c66d1b;
 }
 
 .options__icon--rock {
-  bottom: 20%;
-  right: 54%;
+  bottom: 13%;
+  right: 52%;
 }
 
 .options__icon--rock .image {
   background: url("../../images/icon-rock.svg") no-repeat;
-  background-position: 31% 33%;
+  background-position: 30% 30%;
 }
 
 .options__icon--rock::before {
   background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
   background: linear-gradient(#dc2e4e, #dd405d);
-  -webkit-box-shadow: 0 7px #9e1531;
-          box-shadow: 0 7px #9e1531;
+  -webkit-box-shadow: 0 0.5em #9e1531;
+          box-shadow: 0 0.5em #9e1531;
 }
 
 .image {
@@ -145,38 +155,36 @@ header img {
   position: absolute;
   top: 12%;
   left: 12%;
-  background-position: 31% 33%;
+  background-position: 30% 30%;
 }
 
 .image::after {
   content: '';
   background: #f8f8f8;
-  height: 120px;
-  width: 120px;
+  height: 75%;
+  width: 75%;
   display: block;
   z-index: -1;
   position: absolute;
   border-radius: 50%;
-  -webkit-box-shadow: 0 7px #b9bed4 inset;
-          box-shadow: 0 7px #b9bed4 inset;
+  -webkit-box-shadow: 0 0.5em #b9bed4 inset;
+          box-shadow: 0 0.5em #b9bed4 inset;
 }
 
 .rules-btn {
   background: transparent;
   color: #f8f8f8;
-  border: 2px solid #606e85;
-  height: 42px;
-  width: 130px;
-  border-radius: 5px;
-  font: 600 15px "Barlow Semi Condensed", sans-serif;
+  border: 0.15em solid #606e85;
+  height: 12%;
+  width: 20%;
+  border-radius: 0.3em;
+  font: 600 1rem "Barlow Semi Condensed", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.15em;
   cursor: pointer;
   position: absolute;
-  bottom: 10%;
-  right: 5%;
-  -webkit-transform: translate(5%, 10%);
-          transform: translate(5%, 10%);
+  top: 105%;
+  left: 120%;
 }
 
 .rules-btn:hover {
@@ -187,8 +195,8 @@ header img {
 .rules {
   display: none;
   position: absolute;
-  height: 400px;
-  width: 400px;
+  height: 60%;
+  width: 30%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -199,8 +207,10 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  padding: 1.5em;
   position: relative;
+  height: 10%;
+  width: 88%;
 }
 
 .rules__header h1 {
@@ -212,13 +222,13 @@ header img {
 }
 
 .rules__header img {
-  width: 20px;
-  height: 20px;
+  width: 6%;
+  height: 27%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   position: absolute;
-  right: 20px;
+  right: 1.5em;
   cursor: pointer;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -233,6 +243,8 @@ header img {
 
 .rules__image {
   position: absolute;
+  height: 70%;
+  width: 75%;
   top: 70%;
   left: 50%;
   -webkit-transform: translate(-50%, -70%);
@@ -259,7 +271,7 @@ header img {
   background: #f8f8f8;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.8em;
   z-index: -1;
   position: absolute;
   top: 0;
@@ -270,17 +282,17 @@ header img {
   display: none;
   position: relative;
   top: 10%;
-  left: 30%;
-  width: 50%;
+  left: 5%;
+  width: 100%;
   height: 100%;
 }
 
 .game p {
   color: #f8f8f8;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.15em;
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .game__user {
@@ -291,7 +303,7 @@ header img {
 .game__computer {
   width: 50%;
   position: relative;
-  left: 8%;
+  left: 10%;
 }
 
 .move-left {
@@ -306,8 +318,8 @@ header img {
 
 .winner-shadow {
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 30px rgba(146, 145, 145, 0.07), 0 0 0 60px rgba(146, 145, 145, 0.05), 0 0 0 90px rgba(146, 145, 145, 0.03);
-          box-shadow: 0 0 0 30px rgba(146, 145, 145, 0.07), 0 0 0 60px rgba(146, 145, 145, 0.05), 0 0 0 90px rgba(146, 145, 145, 0.03);
+  -webkit-box-shadow: 0 0 0 2em rgba(146, 145, 145, 0.07), 0 0 0 4em rgba(146, 145, 145, 0.05), 0 0 0 6em rgba(146, 145, 145, 0.03);
+          box-shadow: 0 0 0 2em rgba(146, 145, 145, 0.07), 0 0 0 4em rgba(146, 145, 145, 0.05), 0 0 0 6em rgba(146, 145, 145, 0.03);
   -webkit-transition: -webkit-box-shadow 1s ease-in;
   transition: -webkit-box-shadow 1s ease-in;
   transition: box-shadow 1s ease-in;
@@ -316,13 +328,17 @@ header img {
 
 .user-choice {
   position: absolute;
-  top: 70%;
-  left: 40%;
+  top: 30%;
+  left: 20%;
+  height: 100%;
+  width: 100%;
 }
 
 .user-choice .options__icon {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  height: 45%;
+  width: 52%;
+  top: 0;
+  right: 75%;
 }
 
 .user-choice .options__icon:hover {
@@ -332,44 +348,34 @@ header img {
 }
 
 .user-choice .image {
-  background-position: 31% 33%;
+  background-position: 32% 32%;
 }
 
 .choice-placement {
-  height: 50%;
-  width: 60%;
+  height: 45%;
+  width: 53%;
   background: #17223e;
   border-radius: 50%;
   position: relative;
   top: 12%;
-  left: -4%;
+  left: 0;
+  z-index: -1;
 }
 
 .choice-placement .computer-choice {
+  height: 100%;
+  width: 100%;
   position: relative;
   display: none;
   -webkit-animation: appears 1s 1;
           animation: appears 1s 1;
 }
 
-.choice-placement .computer-choice--rock {
-  top: 87%;
-  left: 45%;
-}
-
-.choice-placement .computer-choice--paper {
-  top: 87%;
-  left: 70%;
-}
-
-.choice-placement .computer-choice--scissors {
-  top: 87%;
-  left: 20%;
-}
-
 .choice-placement .options__icon {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
 }
 
 .choice-placement .options__icon:hover {
@@ -379,7 +385,7 @@ header img {
 }
 
 .choice-placement .image {
-  background-position: 31% 33%;
+  background-position: 32% 32%;
 }
 
 .result {
@@ -397,7 +403,7 @@ header img {
           align-items: center;
   position: absolute;
   top: 25%;
-  left: 14%;
+  left: 20%;
   -webkit-animation: appears 3s 1;
           animation: appears 3s 1;
 }
@@ -449,7 +455,7 @@ header img {
     right: 0;
   }
   to {
-    right: 15%;
+    right: 10%;
   }
 }
 
@@ -458,25 +464,25 @@ header img {
     right: 0;
   }
   to {
-    right: 15%;
+    right: 10%;
   }
 }
 
 @-webkit-keyframes move-right {
   from {
-    left: 8%;
+    right: 8%;
   }
   to {
-    left: 20%;
+    left: 27%;
   }
 }
 
 @keyframes move-right {
   from {
-    left: 8%;
+    right: 8%;
   }
   to {
-    left: 20%;
+    left: 27%;
   }
 }
 
@@ -490,12 +496,18 @@ body {
 
 main {
   height: 60%;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 footer {
-  font-size: 11px;
+  font-size: 0.7rem;
   position: absolute;
-  bottom: 10px;
+  bottom: 2%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);

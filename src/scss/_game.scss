@@ -2,16 +2,16 @@
     display: none;
     position: relative;
     top: 10%;
-    left: 30%;
-    width: 50%;
+    left: 5%;
+    width: 100%;
     height: 100%;
 
     p {
         color: $elements_bg-color;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 0.15em;
         font-family: $main-font;
-        font-size: 20px;
+        font-size: 1.3rem;
     }
 
     &__user {
@@ -22,7 +22,7 @@
     &__computer {
         width: 50%;
         position: relative;
-        left: 8%;
+        left: 10%;
     }
 }
 
@@ -36,19 +36,23 @@
 
 .winner-shadow {
     border-radius: 50%;
-    box-shadow: 0 0 0 30px rgba(146, 145, 145, 0.07),
-        0 0 0 60px rgba(146, 145, 145, 0.05),
-        0 0 0 90px rgba(146, 145, 145, 0.03);
+    box-shadow: 0 0 0 2em rgba(146, 145, 145, 0.07),
+        0 0 0 4em rgba(146, 145, 145, 0.05), 0 0 0 6em rgba(146, 145, 145, 0.03);
     transition: box-shadow 1s ease-in;
 }
 
 .user-choice {
     position: absolute;
-    top: 70%;
-    left: 40%;
+    top: 30%;
+    left: 20%;
+    height: 100%;
+    width: 100%;
 
     .options__icon {
-        transform: scale(1.4);
+        height: 45%;
+        width: 52%;
+        top: 0;
+        right: 75%;
 
         &:hover {
             filter: brightness(100%);
@@ -57,40 +61,33 @@
     }
 
     .image {
-        @include hand-placement;
+        background-position: 32% 32%;
     }
 }
 
 .choice-placement {
-    height: 50%;
-    width: 60%;
+    height: 45%;
+    width: 53%;
     background: #17223e;
     border-radius: 50%;
     position: relative;
     top: 12%;
-    left: -4%;
+    left: 0;
+    z-index: -1;
 
     .computer-choice {
+        height: 100%;
+        width: 100%;
         position: relative;
         display: none;
         animation: appears 1s 1;
-
-        &--rock {
-            top: 87%;
-            left: 45%;
-        }
-        &--paper {
-            top: 87%;
-            left: 70%;
-        }
-        &--scissors {
-            top: 87%;
-            left: 20%;
-        }
     }
 
     .options__icon {
-        transform: scale(1.4);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
         &:hover {
             filter: brightness(100%);
             cursor: auto;
@@ -98,7 +95,7 @@
     }
 
     .image {
-        @include hand-placement;
+        background-position: 32% 32%;
     }
 }
 
@@ -110,7 +107,7 @@
     align-items: center;
     position: absolute;
     top: 25%;
-    left: 14%;
+    left: 20%;
     animation: appears 3s 1;
 
     &__header {
@@ -154,16 +151,16 @@
     }
 
     to {
-        right: 15%;
+        right: 10%;
     }
 }
 
 @keyframes move-right {
     from {
-        left: 8%;
+        right: 8%;
     }
 
     to {
-        left: 20%;
+        left: 27%;
     }
 }

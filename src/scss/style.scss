@@ -10,12 +10,17 @@ body {
 
 main {
     height: 60%;
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 footer {
-    font-size: 11px;
+    font-size: 0.7rem;
     position: absolute;
-    bottom: 10px;
+    bottom: 2%;
     left: 50%;
     transform: translate(-50%);
     a {

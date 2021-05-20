@@ -3,24 +3,27 @@ header {
     border: 2px solid $border-color;
     border-radius: 20px;
     display: flex;
-    padding: 20px;
+    padding: 1.5em;
     align-items: center;
     position: relative;
     left: 50%;
+    // top: 10%;
     transform: translate(-50%, 10%);
 
     img {
-        height: 92px;
+        height: 100%;
     }
 }
 
 .score-box {
-    height: 100px;
-    width: 130px;
+    height: 70%;
+    width: 18%;
     background: $elements_bg-color;
     border-radius: 10px;
     position: absolute;
-    right: 20px;
+    right: 1.5em;
+    display: flex;
+    justify-content: center;
 
     &__text {
         display: flex;
@@ -31,14 +34,15 @@ header {
 
         span {
             color: hsl(229, 64%, 46%);
-            font: 700 15px $main-font;
+            font: 700 1rem $main-font;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         .points {
-            font: 700 50px $main-font;
+            font: 700 3.5rem $main-font;
             color: #58566b;
+            top: 0;
         }
     }
 }
