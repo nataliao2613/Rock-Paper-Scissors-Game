@@ -22,6 +22,13 @@ let computerMove = ''
 let score = ''
 let winner = ''
 
+const setHeader = (title, left) => {
+    winner = title
+    if(document.body.clientWidth === 640){
+        resultHeader.style.left = left
+    }
+}
+
 if(window.localStorage.getItem('score') === null) score = 0
     else score = window.localStorage.getItem('score')
 
@@ -68,29 +75,36 @@ const game = () => {
         case 'paper':
             if(computerMove === 'scissors'){
                 score--
-                winner = 'You lose'
+                setHeader('You lose', '22%')
+                
             } else if(computerMove === 'rock'){
                 score++
-                winner = 'You win'
-            } else winner = 'Draw'
+                setHeader('You win', '27%')             
+            } else {
+                setHeader('Draw', '0')
+            } 
             break
         case 'rock':
             if(computerMove === 'paper'){
                 score--
-                winner = 'You lose'
+                setHeader('You lose', '22%')
             } else if(computerMove === 'scissors'){
                 score++
-                winner = 'You win'
-            } else winner = 'Draw'
+                setHeader('You win', '27%')     
+            } else{
+                setHeader('Draw', '0')
+            } 
             break
         case 'scissors':
             if(computerMove === 'rock'){
                 score--
-                winner = 'You lose'
+                setHeader('You lose', '22%')
             } else if(computerMove === 'paper'){
                 score++
-                winner = 'You win'
-            } else winner = 'Draw'
+                setHeader('You win', '27%')     
+            } else{
+                setHeader('Draw', '0')
+            } 
             break
     }
     window.localStorage.setItem('score', score)

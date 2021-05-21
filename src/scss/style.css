@@ -440,7 +440,7 @@ header img {
   color: #f8f8f8;
   font-family: "Barlow Semi Condensed", sans-serif;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 3.1em;
 }
 
 .result button {
@@ -449,8 +449,8 @@ header img {
   text-transform: uppercase;
   font: 600 15px "Barlow Semi Condensed", sans-serif;
   letter-spacing: 2px;
-  height: 42px;
-  width: 200px;
+  height: 2.5em;
+  width: 70%;
   border-radius: 5px;
   border: none;
 }
@@ -612,6 +612,62 @@ header img {
   .move-right {
     -webkit-animation: move-right__m 2s forwards;
             animation: move-right__m 2s forwards;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .score-box {
+    width: 35%;
+  }
+  .options {
+    left: 46%;
+    background-position: 10% 0;
+  }
+  .options__icon {
+    width: 40%;
+    height: 37%;
+  }
+  .options__icon--scissors {
+    right: 10%;
+  }
+  .options__icon--rock {
+    right: 45%;
+  }
+  .result {
+    left: 21%;
+    width: 53%;
+    top: 15%;
+  }
+  .result__header {
+    position: relative;
+    left: 25%;
+  }
+  .result button {
+    width: 90%;
+  }
+  .rules {
+    width: 60%;
+  }
+  .rules-btn {
+    width: 40%;
+    left: 100%;
+    top: 95%;
+  }
+  .game__computer p {
+    width: 130%;
+    position: relative;
+    right: 10%;
+  }
+  .choice-placement {
+    width: 85%;
+    height: 40%;
+    left: 0;
+    top: 10%;
+  }
+  .user-choice .options__icon {
+    width: 85%;
+    right: 40%;
+    height: 40%;
   }
 }
 

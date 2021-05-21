@@ -119,6 +119,78 @@
     }
 }
 
+@include screen__s {
+    .score-box {
+        width: 35%;
+    }
+    .options {
+        left: 46%;
+        background-position: 10% 0;
+        &__icon {
+            width: 40%;
+            height: 37%;
+
+            &--scissors {
+                right: 10%;
+                // bottom: 74%;
+            }
+
+            &--rock {
+                // bottom: 20%;
+                right: 45%;
+            }
+        }
+    }
+    .result {
+        left: 21%;
+        width: 53%;
+        top: 15%;
+
+        &__header {
+            position: relative;
+            left: 25%;
+        }
+
+        button {
+            width: 90%;
+        }
+    }
+
+    .rules {
+        width: 60%;
+    }
+
+    .rules-btn {
+        width: 40%;
+        left: 100%;
+        top: 95%;
+    }
+
+    .game {
+        &__computer {
+            p {
+                width: 130%;
+                position: relative;
+                right: 10%;
+            }
+        }
+    }
+
+    .choice-placement {
+        width: 85%;
+        height: 40%;
+        left: 0;
+        top: 10%;
+    }
+    .user-choice {
+        .options__icon {
+            width: 85%;
+            right: 40%;
+            height: 40%;
+        }
+    }
+}
+
 @keyframes move-left__m {
     from {
         right: 10%;
