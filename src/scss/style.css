@@ -514,6 +514,143 @@ header img {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .score-box {
+    width: 25%;
+  }
+  .options__icon {
+    width: 35%;
+    height: 37%;
+  }
+  .options__icon .image {
+    background-size: 35%;
+  }
+  .options__icon--paper {
+    right: 80%;
+  }
+  .options__icon--scissors {
+    right: 20%;
+    bottom: 74%;
+  }
+  .options__icon--rock {
+    bottom: 20%;
+    right: 50%;
+  }
+  .result {
+    left: 21%;
+    width: 53%;
+  }
+  .rules {
+    width: 35%;
+  }
+  .choice-placement {
+    width: 60%;
+    left: 12%;
+  }
+  .user-choice .options__icon {
+    width: 60%;
+    right: 67%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .score-box {
+    width: 30%;
+  }
+  .options {
+    width: 100%;
+  }
+  .options__icon {
+    width: 35%;
+    height: 37%;
+  }
+  .options__icon .image {
+    background-size: 35%;
+  }
+  .options__icon--paper {
+    right: 80%;
+  }
+  .options__icon--scissors {
+    right: 20%;
+    bottom: 74%;
+  }
+  .options__icon--rock {
+    bottom: 20%;
+    right: 50%;
+  }
+  .rules-btn {
+    width: 30%;
+    left: 110%;
+    top: 100%;
+  }
+  .rules {
+    height: 65%;
+    width: 50%;
+  }
+  .result {
+    left: 22%;
+    width: 53%;
+  }
+  .game p {
+    width: 110%;
+  }
+  .game__user {
+    right: 10%;
+  }
+  .choice-placement {
+    width: 80%;
+    left: 12%;
+  }
+  .user-choice .options__icon {
+    width: 80%;
+    right: 50%;
+  }
+  .move-left {
+    -webkit-animation: move-left__m 2s forwards;
+            animation: move-left__m 2s forwards;
+  }
+  .move-right {
+    -webkit-animation: move-right__m 2s forwards;
+            animation: move-right__m 2s forwards;
+  }
+}
+
+@-webkit-keyframes move-left__m {
+  from {
+    right: 10%;
+  }
+  to {
+    right: 20%;
+  }
+}
+
+@keyframes move-left__m {
+  from {
+    right: 10%;
+  }
+  to {
+    right: 20%;
+  }
+}
+
+@-webkit-keyframes move-right__m {
+  from {
+    right: 8%;
+  }
+  to {
+    left: 23%;
+  }
+}
+
+@keyframes move-right__m {
+  from {
+    right: 8%;
+  }
+  to {
+    left: 23%;
+  }
+}
+
 body {
   background: radial-gradient(#1f3756, #141539);
   height: 100vh;

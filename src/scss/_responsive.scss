@@ -1,0 +1,140 @@
+@include screen__l {
+    .score-box {
+        width: 25%;
+    }
+    .options {
+        &__icon {
+            width: 35%;
+            height: 37%;
+            .image {
+                background-size: 35%;
+            }
+
+            &--paper {
+                right: 80%;
+            }
+
+            &--scissors {
+                right: 20%;
+                bottom: 74%;
+            }
+
+            &--rock {
+                bottom: 20%;
+                right: 50%;
+            }
+        }
+    }
+    .result {
+        left: 21%;
+        width: 53%;
+    }
+
+    .rules {
+        width: 35%;
+    }
+
+    .choice-placement {
+        width: 60%;
+        left: 12%;
+    }
+    .user-choice {
+        .options__icon {
+            width: 60%;
+            right: 67%;
+        }
+    }
+}
+
+@include screen__m {
+    .score-box {
+        width: 30%;
+    }
+    .options {
+        width: 100%;
+        &__icon {
+            width: 35%;
+            height: 37%;
+            .image {
+                background-size: 35%;
+            }
+
+            &--paper {
+                right: 80%;
+            }
+
+            &--scissors {
+                right: 20%;
+                bottom: 74%;
+            }
+
+            &--rock {
+                bottom: 20%;
+                right: 50%;
+            }
+        }
+    }
+    .rules-btn {
+        width: 30%;
+        left: 110%;
+        top: 100%;
+    }
+
+    .rules {
+        height: 65%;
+        width: 50%;
+    }
+
+    .result {
+        left: 22%;
+        width: 53%;
+    }
+
+    .game {
+        p {
+            width: 110%;
+        }
+
+        &__user {
+            right: 10%;
+        }
+    }
+
+    .choice-placement {
+        width: 80%;
+        left: 12%;
+    }
+
+    .user-choice {
+        .options__icon {
+            width: 80%;
+            right: 50%;
+        }
+    }
+    .move-left {
+        animation: move-left__m 2s forwards;
+    }
+    .move-right {
+        animation: move-right__m 2s forwards;
+    }
+}
+
+@keyframes move-left__m {
+    from {
+        right: 10%;
+    }
+
+    to {
+        right: 20%;
+    }
+}
+
+@keyframes move-right__m {
+    from {
+        right: 8%;
+    }
+
+    to {
+        left: 23%;
+    }
+}

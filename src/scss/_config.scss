@@ -22,3 +22,21 @@ $elements_bg-color: #f8f8f8;
 @mixin hand-placement() {
     background-position: 30% 30%;
 }
+
+@mixin screen__l {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin screen__m {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin screen__s {
+    @media screen and (max-width: 640px) {
+        @content;
+    }
+}
