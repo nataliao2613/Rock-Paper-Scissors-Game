@@ -622,6 +622,7 @@ header img {
   .options {
     left: 46%;
     background-position: 10% 0;
+    width: 100%;
   }
   .options__icon {
     width: 40%;
@@ -671,7 +672,7 @@ header img {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   header {
     width: 80%;
     height: 10%;
@@ -693,7 +694,7 @@ header img {
     font-size: 3rem;
   }
   .options {
-    width: 140%;
+    height: 90%;
     left: 42%;
   }
   .rules {
@@ -749,6 +750,27 @@ header img {
     width: 110%;
     right: 40%;
     height: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .options {
+    width: 130%;
+  }
+  footer {
+    left: 75%;
+    -webkit-transform: translate(-75%);
+            transform: translate(-75%);
+    width: 55%;
+  }
+  .rules-btn {
+    width: 70%;
+  }
+  .game__computer p {
+    width: 140%;
+  }
+  .choice-placement {
+    top: 13%;
   }
 }
 
