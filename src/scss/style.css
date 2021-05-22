@@ -671,6 +671,87 @@ header img {
   }
 }
 
+@media screen and (max-width: 480px) {
+  header {
+    width: 80%;
+    height: 10%;
+  }
+  header img {
+    height: 150%;
+  }
+  footer {
+    width: 52%;
+  }
+  .score-box {
+    width: 25%;
+    height: 80%;
+  }
+  .score-box__text {
+    top: 5%;
+  }
+  .score-box__text .points {
+    font-size: 3rem;
+  }
+  .options {
+    width: 140%;
+    left: 42%;
+  }
+  .rules {
+    width: 75%;
+  }
+  .rules-btn {
+    width: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    top: 110%;
+  }
+  .result {
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 100%;
+    top: 65%;
+  }
+  .result__header {
+    position: relative;
+    left: 0;
+  }
+  .result__header button {
+    width: 100%;
+  }
+  .game {
+    top: -7%;
+    height: 85%;
+  }
+  .game__computer p {
+    width: 135%;
+    right: 10%;
+    font-size: 1rem;
+    top: 10%;
+  }
+  .game__user p {
+    position: relative;
+    right: 15%;
+    font-size: 1rem;
+    top: 10%;
+  }
+  .choice-placement {
+    width: 110%;
+    height: 45%;
+    left: 0;
+    top: 12%;
+  }
+  .user-choice {
+    top: 31%;
+  }
+  .user-choice .options__icon {
+    width: 110%;
+    right: 40%;
+    height: 45%;
+  }
+}
+
 @-webkit-keyframes move-left__m {
   from {
     right: 10%;

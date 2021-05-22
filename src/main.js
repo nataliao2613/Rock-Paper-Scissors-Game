@@ -57,17 +57,13 @@ const computerChooses = () => {
 const showComputerChoice = () => {
     computerChoiceBox.style.display = 'block'
     setTimeout(() => {
-            if(winner === 'You win'){
-        userChoice.classList.add('winner-shadow')
-    }
-    else if(winner === 'You lose'){
-        computerChoice.classList.add('winner-shadow')
-    } else {
-        userChoice.classList.add('winner-shadow')
-        computerChoice.classList.add('winner-shadow')
-    }
+        if(winner === 'You win') userChoice.classList.add('winner-shadow')
+        else if(winner === 'You lose') computerChoice.classList.add('winner-shadow') 
+        else {
+            userChoice.classList.add('winner-shadow')
+            computerChoice.classList.add('winner-shadow')
+        }
     }, 1000)
-
 }
 
 const game = () => {
@@ -75,14 +71,11 @@ const game = () => {
         case 'paper':
             if(computerMove === 'scissors'){
                 score--
-                setHeader('You lose', '22%')
-                
+                setHeader('You lose', '22%')              
             } else if(computerMove === 'rock'){
                 score++
                 setHeader('You win', '27%')             
-            } else {
-                setHeader('Draw', '0')
-            } 
+            } else setHeader('Draw', '0')
             break
         case 'rock':
             if(computerMove === 'paper'){
@@ -91,9 +84,7 @@ const game = () => {
             } else if(computerMove === 'scissors'){
                 score++
                 setHeader('You win', '27%')     
-            } else{
-                setHeader('Draw', '0')
-            } 
+            } else setHeader('Draw', '0')
             break
         case 'scissors':
             if(computerMove === 'rock'){
@@ -102,9 +93,7 @@ const game = () => {
             } else if(computerMove === 'paper'){
                 score++
                 setHeader('You win', '27%')     
-            } else{
-                setHeader('Draw', '0')
-            } 
+            } else setHeader('Draw', '0')
             break
     }
     window.localStorage.setItem('score', score)

@@ -40,3 +40,9 @@ $elements_bg-color: #f8f8f8;
         @content;
     }
 }
+
+@mixin screen__xs {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
