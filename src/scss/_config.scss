@@ -44,3 +44,9 @@ $elements_bg-color: #f8f8f8;
         width: 100%;
     }
 }
+
+@mixin medium_screen() {
+    @media screen and (max-width: 640px) {
+        @content;
+    }
+}

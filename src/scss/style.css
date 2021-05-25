@@ -543,6 +543,64 @@ header img {
   }
 }
 
+@media screen and (max-width: 640px) {
+  header {
+    width: 85%;
+  }
+  .options {
+    width: 20rem;
+    height: 20rem;
+  }
+  .options__icon--paper {
+    left: -5%;
+    -webkit-transform: translate(5%);
+            transform: translate(5%);
+  }
+  .options__icon--scissors {
+    left: 105%;
+    -webkit-transform: translate(-105%);
+            transform: translate(-105%);
+  }
+  .game p {
+    text-align: center;
+  }
+  .result {
+    width: 90%;
+  }
+  @-webkit-keyframes move-left {
+    from {
+      right: 0;
+    }
+    to {
+      right: 30%;
+    }
+  }
+  @keyframes move-left {
+    from {
+      right: 0;
+    }
+    to {
+      right: 30%;
+    }
+  }
+  @-webkit-keyframes move-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: 30%;
+    }
+  }
+  @keyframes move-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: 30%;
+    }
+  }
+}
+
 body {
   background: radial-gradient(#1f3756, #141539);
   height: 100vh;

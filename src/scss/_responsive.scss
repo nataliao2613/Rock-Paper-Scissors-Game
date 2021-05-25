@@ -1,0 +1,52 @@
+@include medium_screen {
+    header {
+        width: 85%;
+    }
+
+    .options {
+        width: 20rem;
+        height: 20rem;
+
+        &__icon {
+            &--paper {
+                left: -5%;
+                transform: translate(5%);
+            }
+
+            &--scissors {
+                left: 105%;
+                transform: translate(-105%);
+            }
+        }
+    }
+
+    .game {
+        p {
+            text-align: center;
+        }
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    @keyframes move-left {
+        from {
+            right: 0;
+        }
+
+        to {
+            right: 30%;
+        }
+    }
+
+    @keyframes move-right {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 30%;
+        }
+    }
+}
