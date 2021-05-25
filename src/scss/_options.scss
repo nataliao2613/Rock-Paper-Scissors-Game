@@ -1,23 +1,21 @@
 .options {
-    background: url('../../images/bg-triangle.svg') no-repeat;
-    background-size: 65% 80%;
-    width: 70%;
-    height: 100%;
-    position: absolute;
-    top: 20%;
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    z-index: 1;
+    top: 0.5rem;
     left: 50%;
-    transform: translate(-28%);
+    transform: translate(-50%);
+    background: url('../../images/bg-triangle.svg') no-repeat;
+    background-position: 50% 40%;
 
     &__icon {
-        display: flex;
         position: absolute;
         cursor: pointer;
-        height: 38%;
-        width: 33%;
+        height: 8rem;
+        width: 8rem;
 
-        &:hover {
-            filter: brightness(70%);
-        }
+        @include option-hover(70%);
 
         &::before {
             content: '';
@@ -26,15 +24,11 @@
             display: block;
             z-index: -1;
             border-radius: 50%;
+            position: absolute;
         }
 
         &--paper {
-            bottom: 75%;
-            right: 85%;
-            .image {
-                background: option-icon('../../images/icon-paper.svg');
-                @include hand-placement;
-            }
+            @include set-hand('../../images/icon-paper.svg');
 
             &::before {
                 background: option-border(
@@ -45,24 +39,19 @@
             }
         }
         &--scissors {
-            bottom: 75%;
-            right: 19%;
-            .image {
-                background: option-icon('../../images/icon-scissors.svg');
-                @include hand-placement;
-            }
+            left: 100%;
+            transform: translate(-100%);
+            @include set-hand('../../images/icon-scissors.svg');
             &::before {
                 background: option-border(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
                 @include border-shadow(#c66d1b);
             }
         }
         &--rock {
-            bottom: 13%;
-            right: 52%;
-            .image {
-                background: option-icon('../../images/icon-rock.svg');
-                @include hand-placement;
-            }
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            @include set-hand('../../images/icon-rock.svg');
             &::before {
                 background: option-border(
                     hsl(349, 71%, 52%),
@@ -79,22 +68,20 @@
 }
 
 .image {
-    height: 100%;
-    width: 100%;
     position: absolute;
-    top: 12%;
-    left: 12%;
-    @include hand-placement;
 
     &::after {
         content: '';
         background: $elements_bg-color;
-        height: 75%;
-        width: 75%;
+        height: 6rem;
+        width: 6rem;
         display: block;
         z-index: -1;
         position: absolute;
         border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         @include bg-shadow();
     }
 }
@@ -103,20 +90,19 @@
     background: transparent;
     color: $elements_bg-color;
     border: 0.15em solid $border-color;
-    height: 12%;
-    width: 20%;
+    // height: 12%;
+    // width: 20%;
+    height: 2.5em;
+    width: 8em;
     border-radius: 0.3em;
     font: 600 1rem $main-font;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     cursor: pointer;
     position: absolute;
-    top: 105%;
-    left: 120%;
-
-    &:hover {
-        filter: brightness(50%);
-    }
+    bottom: 0;
+    right: 3em;
+    @include option-hover(50%);
 }
 
 @keyframes disappear {

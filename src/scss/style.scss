@@ -1,30 +1,17 @@
-@import './config', './header', './options', './rules', './game', './responsive';
+@import './config', './header', './options', './rules', './game';
+// , './responsive';
 
 body {
     background: $background-color;
     height: 100vh;
     margin: 0;
     padding: 0;
-    position: relative;
+    box-sizing: border-box;
 }
 
 main {
-    height: 60%;
-    width: 50%;
+    height: 70%;
+    width: 100%;
     position: relative;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-footer {
-    font-size: 0.7rem;
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
-    transform: translate(-50%);
-    a {
-        color: hsl(228, 45%, 44%);
-        font-family: $main-font;
-    }
+    top: 2%;
 }

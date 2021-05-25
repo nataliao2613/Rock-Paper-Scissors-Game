@@ -1,11 +1,12 @@
 .rules {
     display: none;
     position: absolute;
-    height: 60%;
-    width: 30%;
+    height: 25rem;
+    width: 25rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 
     &__header {
         display: flex;
@@ -40,8 +41,8 @@
 
     &__image {
         position: absolute;
-        height: 70%;
-        width: 75%;
+        height: 60%;
+        width: 65%;
         top: 70%;
         left: 50%;
         transform: translate(-50%, -70%);

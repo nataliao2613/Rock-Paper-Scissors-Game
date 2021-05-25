@@ -22,11 +22,9 @@ let computerMove = ''
 let score = ''
 let winner = ''
 
-const setHeader = (title, left) => {
+
+const setHeader = (title) => {
     winner = title
-    if(document.body.clientWidth === 640){
-        resultHeader.style.left = left
-    }
 }
 
 if(window.localStorage.getItem('score') === null) score = 0

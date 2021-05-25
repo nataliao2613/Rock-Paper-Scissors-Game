@@ -3,6 +3,17 @@ $main-font: 'Barlow Semi Condensed', sans-serif;
 $border-color: hsl(217, 16%, 45%);
 $elements_bg-color: #f8f8f8;
 
+@mixin flex-center-relative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@function set-font($size) {
+    @return 700 $size $main-font;
+}
+
 @function option-icon($image) {
     @return url($image) no-repeat;
 }
@@ -15,40 +26,21 @@ $elements_bg-color: #f8f8f8;
     box-shadow: 0 0.5em $color;
 }
 
+@mixin option-hover($value) {
+    &:hover {
+        filter: brightness($value);
+    }
+}
+
 @mixin bg-shadow() {
     box-shadow: 0 0.5em #b9bed4 inset;
 }
 
-@mixin hand-placement() {
-    background-position: 30% 30%;
-}
-
-@mixin screen__l {
-    @media screen and (max-width: 1024px) {
-        @content;
-    }
-}
-
-@mixin screen__m {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin screen__s {
-    @media screen and (max-width: 640px) {
-        @content;
-    }
-}
-
-@mixin screen__xs {
-    @media screen and (max-width: 600px) {
-        @content;
-    }
-}
-
-@mixin screen__xxs {
-    @media screen and (max-width: 480px) {
-        @content;
+@mixin set-hand($image) {
+    .image {
+        background: url($image) no-repeat;
+        background-position: 50% 50%;
+        height: 100%;
+        width: 100%;
     }
 }
