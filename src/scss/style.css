@@ -548,6 +548,9 @@ header img {
   header {
     width: 85%;
   }
+  .rules-btn {
+    bottom: 8rem;
+  }
   .options {
     width: 20rem;
     height: 20rem;
