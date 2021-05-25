@@ -69,28 +69,28 @@ const game = () => {
         case 'paper':
             if(computerMove === 'scissors'){
                 score--
-                setHeader('You lose', '22%')              
+                setHeader('You lose')              
             } else if(computerMove === 'rock'){
                 score++
-                setHeader('You win', '27%')             
+                setHeader('You win')             
             } else setHeader('Draw', '0')
             break
         case 'rock':
             if(computerMove === 'paper'){
                 score--
-                setHeader('You lose', '22%')
+                setHeader('You lose')
             } else if(computerMove === 'scissors'){
                 score++
-                setHeader('You win', '27%')     
+                setHeader('You win')     
             } else setHeader('Draw', '0')
             break
         case 'scissors':
             if(computerMove === 'rock'){
                 score--
-                setHeader('You lose', '22%')
+                setHeader('You lose')
             } else if(computerMove === 'paper'){
                 score++
-                setHeader('You win', '27%')     
+                setHeader('You win')     
             } else setHeader('Draw', '0')
             break
     }
