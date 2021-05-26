@@ -4,7 +4,6 @@
     }
 
     .rules-btn {
-        // bottom: 0.5rem;
         left: 50%;
         transform: translate(-50%);
     }
@@ -58,5 +57,100 @@
         to {
             left: 35%;
         }
+    }
+}
+
+@include small_screen {
+    header {
+        height: 10%;
+        img {
+            height: 4.5em;
+        }
+    }
+
+    .rules-btn {
+        width: 15rem;
+    }
+
+    .score-box {
+        height: 5rem;
+        width: 6rem;
+
+        &__text {
+            .points {
+                top: -0.1em;
+            }
+
+            .score {
+                top: 0.15em;
+            }
+        }
+    }
+
+    .options {
+        &__icon {
+            height: 7rem;
+            width: 7rem;
+
+            &--paper {
+                @include smaller-icon-size;
+            }
+            &--scissors {
+                @include smaller-icon-size;
+            }
+            &--rock {
+                @include smaller-icon-size;
+            }
+        }
+    }
+
+    .image {
+        &::after {
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+
+    .game {
+        p {
+            font-size: 1em;
+            width: 10rem;
+        }
+
+        &__user {
+            right: 4rem;
+        }
+
+        &__computer {
+            left: 3rem;
+        }
+    }
+
+    .user-choice {
+        top: -2rem;
+    }
+    .choice-placement {
+        position: relative;
+        top: -2rem;
+        height: 7rem;
+        width: 7rem;
+    }
+    .result {
+        top: 4rem;
+
+        &__header {
+            font-size: 3rem;
+            width: 11rem;
+        }
+
+        button {
+            width: 15rem;
+        }
+    }
+
+    .winner-shadow {
+        box-shadow: 0 0 0 1.2em rgba(146, 145, 145, 0.07),
+            0 0 0 2.4em rgba(146, 145, 145, 0.05),
+            0 0 0 3.6em rgba(146, 145, 145, 0.03);
     }
 }

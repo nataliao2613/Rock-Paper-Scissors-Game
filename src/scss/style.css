@@ -610,6 +610,78 @@ header img {
   }
 }
 
+@media screen and (max-width: 480px) {
+  header {
+    height: 10%;
+  }
+  header img {
+    height: 4.5em;
+  }
+  .rules-btn {
+    width: 15rem;
+  }
+  .score-box {
+    height: 5rem;
+    width: 6rem;
+  }
+  .score-box__text .points {
+    top: -0.1em;
+  }
+  .score-box__text .score {
+    top: 0.15em;
+  }
+  .options__icon {
+    height: 7rem;
+    width: 7rem;
+  }
+  .options__icon--paper .image {
+    background-size: 2.5rem;
+  }
+  .options__icon--scissors .image {
+    background-size: 2.5rem;
+  }
+  .options__icon--rock .image {
+    background-size: 2.5rem;
+  }
+  .image::after {
+    height: 5rem;
+    width: 5rem;
+  }
+  .game p {
+    font-size: 1em;
+    width: 10rem;
+  }
+  .game__user {
+    right: 4rem;
+  }
+  .game__computer {
+    left: 3rem;
+  }
+  .user-choice {
+    top: -2rem;
+  }
+  .choice-placement {
+    position: relative;
+    top: -2rem;
+    height: 7rem;
+    width: 7rem;
+  }
+  .result {
+    top: 4rem;
+  }
+  .result__header {
+    font-size: 3rem;
+    width: 11rem;
+  }
+  .result button {
+    width: 15rem;
+  }
+  .winner-shadow {
+    -webkit-box-shadow: 0 0 0 1.2em rgba(146, 145, 145, 0.07), 0 0 0 2.4em rgba(146, 145, 145, 0.05), 0 0 0 3.6em rgba(146, 145, 145, 0.03);
+            box-shadow: 0 0 0 1.2em rgba(146, 145, 145, 0.07), 0 0 0 2.4em rgba(146, 145, 145, 0.05), 0 0 0 3.6em rgba(146, 145, 145, 0.03);
+  }
+}
+
 body {
   background: radial-gradient(#1f3756, #141539);
   height: 100vh;

@@ -50,3 +50,15 @@ $elements_bg-color: #f8f8f8;
         @content;
     }
 }
+
+@mixin small_screen() {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin smaller-icon-size {
+    .image {
+        background-size: 2.5rem;
+    }
+}

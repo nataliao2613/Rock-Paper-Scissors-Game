@@ -101,8 +101,11 @@ const game = () => {
 }
 
 const moveChoices = () => {
-    userPart.classList.add('move-left')
-    computerPart.classList.add('move-right')
+    if(document.body.clientWidth > 480){
+          userPart.classList.add('move-left')
+    computerPart.classList.add('move-right')  
+    }
+
     game()
     resultBox.style.display = 'flex'
 }
