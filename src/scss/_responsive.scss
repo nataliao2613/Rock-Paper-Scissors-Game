@@ -4,7 +4,9 @@
     }
 
     .rules-btn {
-        bottom: 8rem;
+        // bottom: 0.5rem;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .options {
@@ -21,6 +23,16 @@
                 left: 105%;
                 transform: translate(-105%);
             }
+        }
+    }
+
+    .game {
+        &__user {
+            right: 2rem;
+        }
+
+        &__computer {
+            left: 2rem;
         }
     }
 

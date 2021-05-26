@@ -549,7 +549,9 @@ header img {
     width: 85%;
   }
   .rules-btn {
-    bottom: 8rem;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   .options {
     width: 20rem;
@@ -564,6 +566,12 @@ header img {
     left: 105%;
     -webkit-transform: translate(-105%);
             transform: translate(-105%);
+  }
+  .game__user {
+    right: 2rem;
+  }
+  .game__computer {
+    left: 2rem;
   }
   .result {
     width: 90%;
