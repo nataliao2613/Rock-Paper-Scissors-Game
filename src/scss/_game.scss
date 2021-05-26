@@ -103,10 +103,12 @@
     animation: appears 3s 1;
 
     &__header {
-        color: $elements_bg-color;
-        font-family: $main-font;
-        text-transform: uppercase;
-        font-size: 3.1em;
+        h1 {
+            color: $elements_bg-color;
+            font-family: $main-font;
+            text-transform: uppercase;
+            font-size: 3.1em;
+        }
     }
 
     button {

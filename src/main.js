@@ -11,7 +11,7 @@ let computerChoiceBox = document.querySelector('.computer-choice')
 let computerChoice = document.querySelector('.computer-choice div')
 let scoreBox = document.querySelector('.score-box__text .points')
 let resultBox = document.querySelector('.result')
-let resultHeader = document.querySelector('.result__header')
+let resultHeader = document.querySelector('.result__header h1')
 let playAgainButton = document.querySelector('.result button')
 
 let show = false
@@ -25,6 +25,12 @@ let winner = ''
 
 const setHeader = (title) => {
     winner = title
+    if(title === 'Draw' && document.body.clientWidth <= 480){
+        resultHeader.style.left = '20%'
+    }
+    else if (title === 'You win' && document.body.clientWidth <= 480) {
+        resultHeader.style.left = '10%'
+    }
 }
 
 if(window.localStorage.getItem('score') === null) score = 0
@@ -102,8 +108,8 @@ const game = () => {
 
 const moveChoices = () => {
     if(document.body.clientWidth > 480){
-          userPart.classList.add('move-left')
-    computerPart.classList.add('move-right')  
+        userPart.classList.add('move-left')
+        computerPart.classList.add('move-right')  
     }
 
     game()
@@ -127,6 +133,7 @@ const newGame = () => {
         computerChoice.classList.remove('winner-shadow')
         optionsSection.classList.remove('disappear')
         gameSection.classList.remove('appears')
+        resultHeader.style.left = ''
     }, 1000)
 
 }

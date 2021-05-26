@@ -118,7 +118,7 @@
         }
 
         &__user {
-            right: 4rem;
+            right: 3rem;
         }
 
         &__computer {
@@ -127,7 +127,9 @@
     }
 
     .user-choice {
-        top: -2rem;
+        .options__icon {
+            top: -2rem;
+        }
     }
     .choice-placement {
         position: relative;
@@ -137,10 +139,15 @@
     }
     .result {
         top: 4rem;
+        width: 100%;
 
         &__header {
-            font-size: 3rem;
-            width: 12rem;
+            width: 100%;
+            position: relative;
+            h1 {
+                font-size: 3rem;
+                position: relative;
+            }
         }
 
         button {
